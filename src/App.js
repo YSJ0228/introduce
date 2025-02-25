@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { MyIntro } from "./components/MyIntro";
+import { MyMbti } from "./components/MyMbti";
+import { MyName } from "./components/MyName";
+import { LikeImg } from "./components/LikeImg";
+import "./style.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <MyIntro intro="저는 운동과 게임을 좋아합니다!" />
+      <MyMbti mbti="INFJ/P" />
+      <MyName name="윤세준" />
+      <LikeImg imgAlt="좋아하는 이미지" />
     </div>
   );
-}
+};
 
 export default App;
